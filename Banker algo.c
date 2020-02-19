@@ -34,7 +34,7 @@ int main()
     for (k = 0; k < 5; k++) { 
         for (i = 0; i < n; i++) { 
             if (f[i] == 0) { 
-  
+  		
                 int flag = 0; 
                 for (j = 0; j < m; j++) { 
                     if (need[i][j] > avail[j]){ 
@@ -55,8 +55,8 @@ int main()
   
     printf("Following is the SAFE Sequence\n"); 
     for (i = 0; i < n - 1; i++) 
-        printf(" P%d ->", ans[i]); 
-    printf(" P%d", ans[n - 1]); 
+        printf(" P-%d ->", ans[i]); 
+    printf(" P-%d", ans[n - 1]); 
   
     return (0); 
   

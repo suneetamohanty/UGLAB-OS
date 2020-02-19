@@ -23,7 +23,8 @@ void main()
 	printf("\nEnter size of each process: ");
 	for(i = 0; i < pno; i++)
 		scanf("%d", &psize[i]);
-	for(i = 0; i < pno; i++)         //allocation as per first fit
+
+	for(i = 0; i < pno; i++)         		//allocation as per first fit
 		for(j = 0; j < bno; j++)
 			if(flags[j] == 0 && bsize[j] >= psize[i])
 			{
@@ -32,8 +33,10 @@ void main()
 				break;
 			}
 	
+
+
 	//display allocation details
-	printf("\nBlock no.\tsize\t\tprocess no.\t\tsize");
+	printf("\nBlock no.\tsize\t\tprocess no.\t\tsize");   
 	for(i = 0; i < bno; i++)
 	{
 		printf("\n%d\t\t%d\t\t", i+1, bsize[i]);
